@@ -1,0 +1,219 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.workday2 {
+  .container {
+    max-width: 1000px;
+    margin: 0px auto;
+    
+  }
+  .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+    background-color: transparent;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  .text-primary {
+    color: #ec971f !important;
+  }
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  .td, .th {
+    padding: 0.25rem !important;
+  }
+  .tdSrch{
+    width: 25%;
+    float: right;
+    vertical-align: top;
+  }
+  .trSrch{
+    width: 100%;
+  }
+  .input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+.srch{
+  float: right;
+}
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > .form-control, .input-group > .custom-select, .input-group > .custom-file {
+  position: relative;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+.form-control, label, input::placeholder {
+  line-height: 1.1;
+}
+.form-control, .is-focused .form-control {
+  background-image: linear-gradient(to top, #ec971f 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
+
+.form-control {
+  background: no-repeat center bottom, center calc(100% - 1px);
+  background-size: 0 100%, 100% 100%;
+  border: 0;
+  height: 36px;
+  transition: background 0s ease-out;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  font-size: 14px;
+}
+.form-control {
+  display: block;
+  color: #495057;
+}
+  .btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    margin-top: -1em;
+    margin-bottom: -1em;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.btn .btn-sm, .btn-group-sm > .btn, .btn-group-sm .btn {
+  padding: 0.40625rem 1.25rem;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+.btn .btn-primary {
+  color: #fff;
+  background-color: #ec971f !important;
+  border-color: #ec971f !important;
+  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+}
+.table-responsive {
+  display: block;
+  width: 75%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: #ec971f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 50px;
+  }
+  .rowResult {
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #ec971f;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .rowTable {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .customColor{
+    background-color: #ffffff !important;
+    color: black !important;
+  }
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-black;
+  }
+  .titleWhite {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+    font-weight: 400 !important;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
